@@ -19,6 +19,7 @@ export class DishesController {
     }
 
     @Post()
+    @HttpCode(HttpStatus.CREATED)
     create(@Body() createDishDto: CreateDishDto) {
         return this.dishesService.create(createDishDto);
     }
